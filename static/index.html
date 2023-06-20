@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>小张日记 你的云日记本</title>
+        <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css">
+        <link rel="stylesheet" href="zhr.css">
+    </head>
+    <body class="mdui-theme-layout-auto mdui-theme-primary-light-green mdui-theme-accent-green">
+        <div class="mdui-container-fluid">
+            <div class="mdui-row">
+                <!--屏幕左边的日期选择-->
+                <div class="mdui-col-sm-2 mdui-typo">
+                    <h1>我的日记</h1>
+                    <!--日期列表-->
+                    <ul class="mdui-list" id="list">
+                        <!--脚本请求服务器获取数据，然后添加到这里-->
+                    </ul>
+                </div>
+                <!--屏幕右侧的操作区-->
+                <div class="mdui-col-sm-10">
+                    <!--阅读器-->
+                    <div id="reader" class="mdui-typo">
+                        <h1>hi yo</h1>
+                        <p>看上去还没有打开日记本 去侧边栏里看看吧</p>
+                    </div>
+                    <!--编辑器-->
+                    <div id="editor" class="hidden mdui-typo">
+                        <h1>日记编辑器</h1>
+                        <div class="mdui-textfield mdui-textfield-floating-label">
+                            <label class="mdui-textfield-label">今天发生的了什么？</label>
+                            <textarea class="mdui-textfield-input" id="text-input"></textarea>
+                          </div>
+                        <br>
+                        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" id="save">保存并退出</button>
+                        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" id="exit">直接退出</button>
+                    </div>
+                    <!--底部的工具栏-->
+                    <hr>
+                    <div id="tools" class="mdui-typo">
+                        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" id="edit" disabled>编辑日记</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+        <script src="node_modules/zhang-http-request/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/2.0.1/remarkable.min.js" integrity="sha512-skYYbQHAuOTpeJTthhUH3flZohep8blA+qjZOY0VqmfXMDiYcWxu29F5UbxU4LxaIpGkRBk+3Qf8qaXfd9jngg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+        <script src="zhr.js"></script>
+    </body>
+</html>
